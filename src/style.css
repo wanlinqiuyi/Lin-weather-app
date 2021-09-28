@@ -1,13 +1,31 @@
 body {
-  font-family: arial, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+
+  background: radial-gradient(
+      circle at 50% 0,
+      rgba(236, 111, 77, 0.5),
+      rgba(0, 0, 0, 0) 70.71%
+    ),
+    radial-gradient(
+      circle at 6.7% 75%,
+      rgba(77, 202, 236, 0.5),
+      rgba(0, 0, 0, 0) 70.71%
+    ),
+    radial-gradient(
+      circle at 93.3% 75%,
+      rgba(77, 123, 236, 0.5),
+      rgba(0, 0, 0, 0) 70.71%
+    );
 }
 
-h1 {
-  color: #878787;
-  font-size: 24px;
-  font-weight: 100;
-  line-height: 28px;
-  margin-bottom: 0;
+h1,
+.weather-temperature {
+  color: #ec6e4c;
+  font-size: 50px;
+  line-height: 45px;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 ul {
@@ -31,41 +49,59 @@ li:first-letter {
 }
 
 .weather-app-wrapper {
-  max-width: 600px;
-  margin: 30px auto;
+  max-width: 700px;
+  margin: 70px auto;
 }
 
 .weather-app {
-  padding: 20px;
-  border: 1px solid #dadde1;
-  border-radius: 5px;
+  padding: 50px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  background: rgb(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+  border-right: 1px solid rgb(255, 255, 255, 0.2);
+}
+
+#search-form {
+  text-align: center;
+  display: block;
+}
+
+#city-input {
+  width: 100%;
+  background: rgb(255, 255, 255, 0.2);
+  border: none;
+  outline: none;
+}
+
+.currentLocation {
+  margin: 0 auto;
+  text-align: center;
+  display: block;
 }
 
 .overview {
-  margin-bottom: 20px;
+  margin: 50px auto;
 }
 
-.weather-temperature img {
-  margin-right: 5px;
-  height: 64px;
-  width: 64px;
+.weather-icon {
+  text-align: right;
 }
 
-.weather-temperature strong {
-  color: rgb(33, 33, 33);
-  font-size: 64px;
-  line-height: 1;
-  font-weight: 400;
-}
-
-.weather-temperature .units {
+.weather-temperature .unit {
   position: relative;
+  color: white;
   font-size: 16px;
-  top: -34px;
+  top: -10px;
+}
+
+.weather-info {
+  text-align: left;
 }
 
 .weather-temperature .active {
-  color: rgb(33, 33, 33);
+  color: white;
   cursor: default;
 }
 
@@ -90,4 +126,10 @@ li:first-letter {
 
 .weather-forecast-temperatures {
   font-size: 13px;
+}
+
+small {
+  text-align: center;
+  display: block;
+  margin-top: 10px;
 }

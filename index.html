@@ -19,60 +19,84 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-          <form id="search-form" class="mb-3">
-            <div class="row">
-              <div class="col-9">
-                <input
-                  type="search"
-                  placeholder="Type a city.."
-                  class="form-control"
-                  id="city-input"
-                  autocomplete="off"
-                />
-              </div>
-              <div class="col-3">
-                <input
-                  type="submit"
-                  value="Search"
-                  class="btn btn-primary w-100"
-                />
-              </div>
-            </div>
-          </form>
-          <div class="overview">
-            <h1 id="city"></h1>
-            <ul>
-              <li>Last updated: <span id="date"></span></li>
-              <li id="description"></li>
-            </ul>
+          <div class="weather-temp">
+            <form id="search-form" class="mb-3">
+              <input
+                type="search"
+                placeholder="Enter a city"
+                class="form-control"
+                id="city-input"
+                autocomplete="off"
+              />
+            </form>
           </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="clearfix weather-temperature">
-                <img src="" alt="Clear" id="icon" class="float-left" />
-                <div class="float-left">
-                  <strong id="temperature"></strong
-                  ><span class="units"> °C</span>
+          <div class="currentLocation">
+            <a href="#" class="text-decoration-none" id="currentLocation"
+              >Use current location
+            </a>
+          </div>
+          <div class="overview">
+            <div class="row fisrt">
+              <div class="col-6">
+                <h1 id="city"></h1>
+              </div>
+              <div class="col-6">
+                <div class="weather-temperature d-flex justify-content-end">
+                  <span id="temperature"></span>
+                  <span class="unit">
+                    <a id="celcius" class="active" href="#"> °C</a> |
+                    <a id="fahrenheit" href="#">°F</a>
+                  </span>
                 </div>
               </div>
             </div>
-            <div class="col-6">
-              <ul>
-                <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id="wind"></span> m/h</li>
-              </ul>
+            <div class="row second">
+              <div class="col-6">
+                <div class="weather-info">
+                  <ul>
+                    <li>
+                      <span id="date"></span>
+                    </li>
+                    <li>
+                      <span id="description"></span>
+                    </li>
+
+                    <li>
+                      Humidity: <span id="humidity">
+                        </span>%
+                        </li>
+                        <li>          
+                      </span>Wind:
+                      <span id="wind"></span> m/h
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6">
+                <img id="icon" src="#" alt="" class="float-end temp-emoji" />
+              </div>
             </div>
           </div>
-          <div class="weather-forecast" id="forecast"></div>
-        </div>
-        <small>
+        <div class="weather-forecast" id="forecast"></div>
+      </div>
+      <small>
+        <em>
           <a
-            href="https://github.com/wecodeschool/vanilla-weather-app"
+            href="https://github.com/wanlinqiuyi/Lin-weather-app"
             target="_blank"
             >Open-source code</a
           >
-          by Lin Qiu Yi Wan
-        </small>
-      </div>  </body>
+          by
+          <a
+            href="https://wanlinqiuyi.wixsite.com/portfolio?lang=en"
+            class="text-decoration-none"
+            target="_blank"
+          >
+            Lin Qiu Yi Wan</a
+          >. 2021. All rights reserved.
+        </em>
+      </small>
+    </div>
+  </body>
   <script src="src/index.js"></script>
 </html>
