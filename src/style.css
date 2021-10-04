@@ -1,7 +1,10 @@
+html,
+body {
+  height: 100%;
+}
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
-
   background: radial-gradient(
       circle at 50% 0,
       rgba(236, 111, 77, 0.5),
@@ -17,6 +20,7 @@ body {
       rgba(77, 123, 236, 0.5),
       rgba(0, 0, 0, 0) 70.71%
     );
+  overflow: hidden;
 }
 
 h1,
@@ -49,16 +53,17 @@ li:first-letter {
 }
 
 .weather-app-wrapper {
-  max-width: 700px;
+  max-width: 600px;
   margin: 70px auto;
 }
 
 .weather-app {
   padding: 50px;
-  backdrop-filter: blur(5px);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   background: rgb(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgb(255, 255, 255, 0.2);
   border-right: 1px solid rgb(255, 255, 255, 0.2);
 }
@@ -73,6 +78,10 @@ li:first-letter {
   background: rgb(255, 255, 255, 0.2);
   border: none;
   outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+  border-right: 1px solid rgb(255, 255, 255, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .currentLocation {
@@ -91,7 +100,7 @@ li:first-letter {
 
 .weather-temperature .unit {
   position: relative;
-  color: white;
+  color: rgb(135, 135, 135);
   font-size: 16px;
   top: -10px;
 }
@@ -101,7 +110,7 @@ li:first-letter {
 }
 
 .weather-temperature .active {
-  color: white;
+  color: rgb(135, 135, 135);
   cursor: default;
 }
 
